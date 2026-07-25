@@ -55,7 +55,6 @@
 
 - 作者：Zotero金牌讲师
 - 微信：`ZoteroGL`
-- 邮箱：`929459880@qq.com`
 
 <img src="content/assets/wechat-contact.png" alt="Zotero金牌讲师微信联系二维码" width="220">
 
