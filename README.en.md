@@ -32,7 +32,6 @@ Name normalization and online-resource metadata are presented as two distinct mo
 
 - Author: Zotero金牌讲师
 - WeChat: `ZoteroGL`
-- Email: `929459880@qq.com`
 
 This is an independent project and is not affiliated with or endorsed by Zotero.
 
