@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://gbt2025helper/content/dialog.css" type="text/css"?>
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="gbt2025helper-batch-window"
+        title="GB/T 7714—2025 规范化预览"
+        width="1100" height="720"
+        onload="GBT2025Batch.init()">
+  <script src="chrome://gbt2025helper/content/batch-dialog.js"/>
+  <vbox flex="1" class="gbt-dialog">
+    <html:header class="gbt-intro">
+      <html:h1>GB/T 7714—2025 规范化预览</html:h1>
+      <html:p>所有更改只会在点击“应用所选更改”后写入。低置信度姓名默认不勾选。</html:p>
+      <html:p id="gbt-selection-summary" class="gbt-note"/>
+    </html:header>
+    <html:nav class="gbt-tabs" role="tablist" aria-label="规范化类型">
+      <html:button id="gbt-name-tab" class="gbt-tab is-active" type="button"
+                   role="tab" aria-selected="true"
+                   onclick="GBT2025Batch.showTab('name')">
+        <html:span class="gbt-tab-kicker">功能模块 1</html:span>
+        <html:span class="gbt-tab-title">姓名规范化</html:span>
+        <html:span class="gbt-tab-description">合并拼音姓名，完整输出中国作者姓名</html:span>
+      </html:button>
+      <html:button id="gbt-online-tab" class="gbt-tab" type="button"
+                   role="tab" aria-selected="false"
+                   onclick="GBT2025Batch.showTab('online')">
+        <html:span class="gbt-tab-kicker">功能模块 2</html:span>
+        <html:span class="gbt-tab-title">电子资源（OL）</html:span>
+        <html:span class="gbt-tab-description">设置 OL、规范 DOI，并检查网址与 Extra</html:span>
+      </html:button>
+    </html:nav>
+    <deck id="gbt-view-deck" flex="1" selectedIndex="0" class="gbt-deck">
+      <vbox flex="1" class="gbt-tab-view">
+        <html:div class="gbt-toolbar">
+          <html:button type="button" onclick="GBT2025Batch.setAllNames(true)">全选姓名</html:button>
+          <html:button type="button" onclick="GBT2025Batch.setAllNames(false)">全不选</html:button>
+          <html:button type="button" onclick="GBT2025Batch.setAllExpanded(true)">全部展开</html:button>
+          <html:button type="button" onclick="GBT2025Batch.setAllExpanded(false)">全部折叠</html:button>
+          <html:span id="gbt-name-count" class="gbt-toolbar-status"/>
+        </html:div>
+        <html:div class="gbt-list-head gbt-name-list-head" aria-hidden="true">
+          <html:span>选择</html:span>
+          <html:span>文献条目（点击行可展开作者）</html:span>
+          <html:span>姓名候选</html:span>
+        </html:div>
+        <scrollbox flex="1" orient="vertical" class="gbt-scrollbox">
+          <html:div id="gbt-name-panel" class="gbt-scroll-body"/>
+        </scrollbox>
+      </vbox>
+      <vbox flex="1" class="gbt-tab-view">
+        <html:div class="gbt-toolbar">
+          <html:button type="button" onclick="GBT2025Batch.setAllOnline(true)">全选 OL</html:button>
+          <html:button type="button" onclick="GBT2025Batch.setAllOnline(false)">全不选</html:button>
+          <html:button type="button" onclick="GBT2025Batch.setAllClearExtra(true)">全部清空 Extra</html:button>
+          <html:button type="button" onclick="GBT2025Batch.setAllClearExtra(false)">取消清空</html:button>
+          <html:span id="gbt-online-count" class="gbt-toolbar-status"/>
+        </html:div>
+        <html:div class="gbt-list-head gbt-online-list-head" aria-hidden="true">
+          <html:span>OL</html:span>
+          <html:span>文献条目</html:span>
+          <html:span>类型</html:span>
+          <html:span>DOI、网址与 Extra 处理</html:span>
+        </html:div>
+        <scrollbox flex="1" orient="vertical" class="gbt-scrollbox">
+          <html:div id="gbt-online-panel" class="gbt-scroll-body"/>
+        </scrollbox>
+      </vbox>
+    </deck>
+    <hbox class="gbt-footer" align="end">
+      <vbox flex="1" class="gbt-footer-copy">
+        <html:div id="gbt-skipped" class="gbt-note"/>
+        <html:div id="gbt-error" class="gbt-error" role="alert"/>
+        <html:div class="gbt-contact">若使用Zotero过程中遇到问题，可以联系作者远程协助，可提供全流程Zotero专业服务。微信：ZoteroGL</html:div>
+      </vbox>
+      <hbox pack="end" class="gbt-actions">
+        <button label="取消" oncommand="window.close()"/>
+        <button id="gbt-apply" label="应用所选更改" class="primary"
+                oncommand="GBT2025Batch.apply()"/>
+      </hbox>
+    </hbox>
+  </vbox>
+</window>

@@ -1,0 +1,13 @@
+{
+  "name": "gbt-7714-2025-helper",
+  "version": "0.3.1",
+  "private": true,
+  "description": "Zotero 9 helper for GB/T 7714—2025 metadata and CSL output.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-project.js",
+    "derive-style": "node scripts/derive-companion-style.js",
+    "build": "bash scripts/build.sh"
+  },
+  "license": "AGPL-3.0-only"
+}

@@ -1,0 +1,19 @@
+{
+  "addons": {
+    "gbt7714-2025-helper@wangzfof.github.io": {
+      "updates": [
+        {
+          "version": "0.3.1",
+          "update_link": "https://github.com/WANGZFOF/GB-T-7714-2025-Helper/releases/download/v0.3.1/gbt7714-2025-helper-0.3.1.xpi",
+          "update_hash": "sha256:bc250b34600eb6b66bef760353c86f7db80947a0468994c663dfdfb582bc38aa",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "9.0.0",
+              "strict_max_version": "9.0.*"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

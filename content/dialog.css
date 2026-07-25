@@ -1,0 +1,369 @@
+.gbt-dialog {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 16px;
+  font: menu;
+}
+
+.gbt-intro {
+  flex: 0 0 auto;
+}
+
+.gbt-intro h1 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.gbt-intro p,
+.gbt-note {
+  color: color-mix(in srgb, currentColor 72%, transparent);
+  margin: 0;
+}
+
+.gbt-tabs {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 10px !important;
+  margin: 13px 0 3px !important;
+}
+
+.gbt-tab {
+  position: relative;
+  display: block !important;
+  box-sizing: border-box !important;
+  flex: 1 1 0 !important;
+  width: calc(50% - 5px) !important;
+  min-width: 0 !important;
+  min-height: 76px !important;
+  appearance: none !important;
+  -moz-appearance: none !important;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+  border-radius: 9px !important;
+  background: color-mix(in srgb, Canvas 96%, currentColor) !important;
+  padding: 10px 12px !important;
+  color: inherit !important;
+  text-align: left !important;
+  cursor: pointer !important;
+}
+
+.gbt-tab:hover {
+  border-color: color-mix(in srgb, AccentColor 45%, currentColor) !important;
+  background: color-mix(in srgb, AccentColor 6%, Canvas) !important;
+}
+
+.gbt-tab.is-active {
+  border-color: color-mix(in srgb, AccentColor 72%, CanvasText) !important;
+  background: color-mix(in srgb, AccentColor 10%, Canvas) !important;
+  box-shadow: inset 4px 0 0 AccentColor !important;
+}
+
+.gbt-tab-kicker {
+  display: inline-block !important;
+  border-radius: 999px !important;
+  padding: 2px 7px !important;
+  background: color-mix(in srgb, currentColor 8%, transparent) !important;
+  color: color-mix(in srgb, currentColor 66%, transparent) !important;
+  font-size: 0.82em !important;
+  font-weight: 500 !important;
+}
+
+.gbt-tab.is-active .gbt-tab-kicker {
+  background: AccentColor !important;
+  color: AccentColorText !important;
+}
+
+.gbt-tab-title {
+  display: inline-block !important;
+  min-width: 0 !important;
+  margin-left: 7px !important;
+  font-size: 1.08em !important;
+  font-weight: 650 !important;
+}
+
+.gbt-tab-description {
+  display: block !important;
+  margin-top: 6px !important;
+  color: color-mix(in srgb, currentColor 68%, transparent) !important;
+  font-size: 0.9em !important;
+  line-height: 1.35 !important;
+}
+
+.gbt-deck,
+.gbt-tab-view {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.gbt-tab-view {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gbt-scrollbox {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+.gbt-toolbar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 9px 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.gbt-toolbar-status {
+  margin-left: auto;
+  color: color-mix(in srgb, currentColor 70%, transparent);
+}
+
+.gbt-list-head {
+  box-sizing: border-box !important;
+  display: grid !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  gap: 9px !important;
+  min-height: 34px !important;
+  padding: 7px 12px !important;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent) !important;
+  border-bottom: 0 !important;
+  border-radius: 7px 7px 0 0 !important;
+  background: color-mix(in srgb, currentColor 7%, Canvas) !important;
+  color: color-mix(in srgb, currentColor 74%, transparent) !important;
+  font-size: 0.9em !important;
+  font-weight: 600 !important;
+}
+
+.gbt-name-list-head {
+  grid-template-columns: 28px minmax(0, 1fr) 110px !important;
+}
+
+.gbt-online-list-head {
+  grid-template-columns: 34px minmax(160px, 1fr) 110px minmax(280px, 1.25fr) !important;
+}
+
+.gbt-scroll-body {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0 18px;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 0 0 7px 7px;
+}
+
+.gbt-item-card,
+.gbt-online-card {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 0;
+  background: Canvas;
+}
+
+.gbt-item-summary {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 110px;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.gbt-item-summary:hover,
+.gbt-online-card:hover {
+  background: color-mix(in srgb, AccentColor 5%, Canvas);
+}
+
+.gbt-item-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gbt-badge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: color-mix(in srgb, AccentColor 12%, Canvas);
+  color: color-mix(in srgb, AccentColor 78%, CanvasText);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.gbt-creator-list {
+  border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.gbt-creator-row {
+  display: grid;
+  grid-template-columns: 24px minmax(110px, 0.8fr) 22px minmax(180px, 1.2fr) minmax(70px, 0.45fr) minmax(180px, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.gbt-creator-row:last-child {
+  border-bottom: 0;
+}
+
+.gbt-creator-row input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.gbt-original-name,
+.gbt-role,
+.gbt-reason {
+  overflow-wrap: anywhere;
+}
+
+.gbt-arrow,
+.gbt-role,
+.gbt-reason {
+  color: color-mix(in srgb, currentColor 65%, transparent);
+}
+
+.gbt-online-card {
+  display: grid;
+  grid-template-columns: 34px minmax(160px, 1fr) 110px minmax(280px, 1.25fr);
+  align-items: start;
+  gap: 9px;
+  padding: 10px 12px;
+}
+
+.gbt-online-item-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+.gbt-online-controls {
+  min-width: 0;
+}
+
+.gbt-online-options {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.gbt-online-fields {
+  display: grid;
+  grid-template-columns: 42px minmax(150px, 1fr);
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+.gbt-online-fields input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.gbt-online-options {
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gbt-danger-option {
+  color: #b42318;
+}
+
+.gbt-footer {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  gap: 14px;
+  padding-top: 9px;
+  border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.gbt-footer-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.gbt-error {
+  min-height: 1.2em;
+  color: #b42318;
+  white-space: pre-wrap;
+}
+
+.gbt-contact {
+  margin-top: 3px;
+  color: color-mix(in srgb, currentColor 68%, transparent);
+  font-size: 0.92em;
+}
+
+.gbt-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.gbt-empty {
+  padding: 22px;
+  text-align: center;
+  color: color-mix(in srgb, currentColor 65%, transparent);
+}
+
+@media (max-width: 820px) {
+  .gbt-tabs {
+    display: block !important;
+  }
+
+  .gbt-tab {
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+
+  .gbt-online-list-head {
+    grid-template-columns: 34px minmax(120px, 1fr) 90px;
+  }
+
+  .gbt-online-list-head span:last-child {
+    display: none;
+  }
+
+  .gbt-online-card {
+    grid-template-columns: 34px minmax(120px, 1fr) 90px;
+  }
+
+  .gbt-online-controls {
+    grid-column: 2 / -1;
+  }
+
+  .gbt-creator-row {
+    grid-template-columns: 24px minmax(100px, 0.8fr) 18px minmax(150px, 1fr);
+  }
+
+  .gbt-role,
+  .gbt-creator-row .gbt-reason {
+    grid-column: 2 / -1;
+  }
+
+}
+
+@media (max-width: 620px) {
+  .gbt-tab {
+    min-height: 88px !important;
+  }
+
+  .gbt-name-list-head,
+  .gbt-item-summary {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+
+  .gbt-name-list-head span:last-child,
+  .gbt-item-summary .gbt-badge {
+    display: none;
+  }
+}

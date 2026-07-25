@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://gbt2025helper/content/history-dialog.css" type="text/css"?>
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="gbt2025helper-history-window"
+        title="GB/T 7714—2025 修改记录与撤销"
+        width="980" height="700"
+        onload="GBT2025History.init()">
+  <script src="chrome://gbt2025helper/content/history-dialog.js"/>
+  <vbox flex="1" class="gbt-history-dialog">
+    <html:header>
+      <html:h1>修改记录与撤销</html:h1>
+      <html:p>历史保存在 Zotero 本地数据目录。发生后续编辑的字段默认不会被覆盖。</html:p>
+    </html:header>
+    <html:div class="gbt-history-picker">
+      <html:label for="gbt-history-batches">修改批次</html:label>
+      <html:select id="gbt-history-batches" onchange="GBT2025History.loadSelected()"/>
+      <html:button type="button" onclick="GBT2025History.refresh()">刷新</html:button>
+      <html:button type="button" onclick="GBT2025History.exportSelected()">导出所选批次</html:button>
+    </html:div>
+    <html:div id="gbt-history-summary" class="gbt-history-summary"/>
+    <html:div id="gbt-history-items" class="gbt-history-items"/>
+    <html:footer>
+      <html:div id="gbt-history-error" class="gbt-history-error"/>
+      <hbox pack="end" class="gbt-history-actions">
+        <button label="关闭" oncommand="window.close()"/>
+        <button id="gbt-history-undo" label="撤销所选条目"
+                oncommand="GBT2025History.undoSelected()"/>
+      </hbox>
+    </html:footer>
+  </vbox>
+</window>

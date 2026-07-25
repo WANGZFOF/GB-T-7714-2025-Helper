@@ -1,0 +1,41 @@
+<vbox id="gbt2025helper-prefpane-root">
+  <groupbox>
+    <label><html:h2>本地撤销数据</html:h2></label>
+    <description>每次修改前都会在 Zotero 数据目录保存快照，插件升级或重新安装不会自动删除。</description>
+    <html:div class="gbt-pref-grid">
+      <html:span>修改批次</html:span><html:strong id="gbt-pref-history-count">正在统计…</html:strong>
+      <html:span>占用空间</html:span><html:strong id="gbt-pref-history-size">正在统计…</html:strong>
+      <html:span>保存位置</html:span><html:code id="gbt-pref-history-path">正在读取…</html:code>
+    </html:div>
+    <html:div class="gbt-pref-actions">
+      <html:button id="gbt-pref-open-folder">打开数据文件夹</html:button>
+      <html:button id="gbt-pref-export-history">导出全部历史</html:button>
+      <html:button id="gbt-pref-clear-history" class="danger">清理历史记录</html:button>
+    </html:div>
+    <description id="gbt-pref-status" class="gbt-pref-muted"/>
+  </groupbox>
+
+  <groupbox>
+    <label><html:h2>帮助与联系</html:h2></label>
+    <html:div class="gbt-contact-layout">
+      <html:div>
+        <html:p class="gbt-contact-message">若使用Zotero过程中遇到问题，可以联系作者远程协助，可提供全流程Zotero专业服务。</html:p>
+        <html:dl>
+          <html:dt>作者</html:dt><html:dd>Zotero金牌讲师</html:dd>
+          <html:dt>微信</html:dt><html:dd><html:code>ZoteroGL</html:code></html:dd>
+          <html:dt>邮箱</html:dt><html:dd>929459880@qq.com</html:dd>
+        </html:dl>
+        <html:div class="gbt-pref-actions">
+          <html:button id="gbt-pref-copy-wechat">复制微信号</html:button>
+          <html:button id="gbt-pref-open-github">项目主页与使用说明</html:button>
+        </html:div>
+      </html:div>
+      <html:figure>
+        <html:img src="chrome://gbt2025helper/content/assets/wechat-contact.png"
+                  alt="Zotero金牌讲师微信联系二维码"/>
+        <html:figcaption>扫码添加微信</html:figcaption>
+      </html:figure>
+    </html:div>
+    <description class="gbt-pref-muted">本插件为个人独立开发项目，与 Zotero 官方无隶属或授权关系。</description>
+  </groupbox>
+</vbox>

@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - run: npm run check
+      - run: npm run build
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: docs/RELEASE_NOTES_v0.3.1.md
+          files: |
+            dist/*.xpi
+            dist/SHA256SUMS
+            styles/gb-t-7714-2025-numeric-bilingual.csl

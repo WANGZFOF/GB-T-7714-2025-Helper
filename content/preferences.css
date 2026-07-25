@@ -1,0 +1,85 @@
+#gbt2025helper-prefpane-root {
+  max-width: 860px;
+  padding: 8px 0 24px;
+}
+
+#gbt2025helper-prefpane-root groupbox {
+  margin-bottom: 16px;
+  padding: 12px 16px 16px;
+}
+
+#gbt2025helper-prefpane-root h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.gbt-pref-grid {
+  display: grid;
+  grid-template-columns: 110px minmax(240px, 1fr);
+  gap: 8px 14px;
+  margin: 14px 0;
+}
+
+.gbt-pref-grid code {
+  overflow-wrap: anywhere;
+}
+
+.gbt-pref-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.gbt-pref-actions .danger {
+  color: #b42318;
+}
+
+.gbt-pref-muted {
+  margin-top: 10px;
+  color: color-mix(in srgb, currentColor 68%, transparent);
+}
+
+.gbt-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 180px;
+  gap: 24px;
+  align-items: center;
+}
+
+.gbt-contact-message {
+  max-width: 640px;
+  line-height: 1.65;
+}
+
+.gbt-contact-layout dl {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 7px 10px;
+}
+
+.gbt-contact-layout dt {
+  color: color-mix(in srgb, currentColor 68%, transparent);
+}
+
+.gbt-contact-layout dd {
+  margin: 0;
+}
+
+.gbt-contact-layout figure {
+  margin: 0;
+  text-align: center;
+}
+
+.gbt-contact-layout img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+}
+
+.gbt-contact-layout figcaption {
+  margin-top: 5px;
+  color: color-mix(in srgb, currentColor 68%, transparent);
+}

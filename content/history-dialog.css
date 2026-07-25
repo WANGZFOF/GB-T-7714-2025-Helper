@@ -1,0 +1,89 @@
+.gbt-history-dialog {
+  box-sizing: border-box;
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+  gap: 10px;
+  padding: 16px;
+  font: menu;
+}
+
+.gbt-history-dialog h1 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.gbt-history-dialog p {
+  margin: 0;
+  color: color-mix(in srgb, currentColor 70%, transparent);
+}
+
+.gbt-history-picker {
+  display: grid;
+  grid-template-columns: auto minmax(260px, 1fr) auto auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.gbt-history-picker select {
+  width: 100%;
+}
+
+.gbt-history-summary {
+  color: color-mix(in srgb, currentColor 72%, transparent);
+}
+
+.gbt-history-items {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  border-radius: 8px;
+}
+
+.gbt-history-row {
+  display: grid;
+  grid-template-columns: 26px minmax(180px, 1fr) minmax(250px, 1.4fr) 110px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.gbt-history-row:last-child {
+  border-bottom: 0;
+}
+
+.gbt-history-title {
+  font-weight: 600;
+}
+
+.gbt-history-meta {
+  color: color-mix(in srgb, currentColor 68%, transparent);
+}
+
+.status-conflict {
+  background: color-mix(in srgb, #f79009 8%, Canvas);
+}
+
+.gbt-history-force {
+  color: #b42318;
+}
+
+.gbt-history-dialog footer {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  padding-top: 9px;
+}
+
+.gbt-history-error {
+  flex: 1;
+  color: #b42318;
+}
+
+.gbt-history-actions {
+  gap: 8px;
+}
